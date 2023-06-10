@@ -22,7 +22,7 @@ node{
    sh "docker login -u saidamo -p ${dockerPassword}"
     }
    sh 'docker push saidamo/myweb:0.0.2'
-   }
+  }
    stage('Nexus Image Push'){
    sh "docker login -u admin -p admin123 3.110.224.219:8083"
    sh "docker tag ashwinxcloud/myweb:0.0.2 3.110.224.219:8083/damo:1.0.0"
